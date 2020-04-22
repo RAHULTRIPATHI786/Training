@@ -14,11 +14,11 @@ public class ActionClassExample {
 	public static void main(String[] args) throws InterruptedException, IOException {
 
 		// Example1: DragAndDrop operation
-//		dragandDrop();
+		dragandDrop();
 
 		// Example 2: clickandhold opeartion
 
-//		clickandhold();
+		clickandhold();
 
 		// Example :3 Mouse hover action
 		mousehoveraction();
