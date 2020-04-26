@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" >
+  <test parallel="methods" name="ChromeBrowser">
+  <parameter name="Browsername" value="Chrome"></parameter>
+  <classes>
+  <class name="org.devlab.ui.testbed.LoginTest"></class>
+  <class name="org.devlab.ui.testbed.RegistrationTest"></class>
+  </classes>
+  </test> 
+  <test parallel="methods" name="FFBrowser">
+  <parameter name="Browsername" value="FF"></parameter>
+  <classes>
+  <class name="org.devlab.ui.testbed.LoginTest"></class>
+  <class name="org.devlab.ui.testbed.RegistrationTest"></class>
+  </classes>
+  </test> 
+  <!-- Test -->
+</suite> <!-- Suite -->

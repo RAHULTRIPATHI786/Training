@@ -21,5 +21,6 @@
 			<attribute name="javadoc_location" value="https://www.selenium.dev/selenium/docs/api/java/"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

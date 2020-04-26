@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="ChromeBrowser(failed)" parallel="methods">
+    <parameter name="Browsername" value="Chrome"/>
+    <classes>
+      <class name="org.devlab.ui.testbed.LoginTest">
+        <methods>
+          <include name="beforeSuiteExc"/>
+          <include name="Login_with_with_set_of_valid_data"/>
+          <include name="initDriver"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- org.devlab.ui.testbed.LoginTest -->
+    </classes>
+  </test> <!-- ChromeBrowser(failed) -->
+  <test thread-count="5" name="FFBrowser(failed)" parallel="methods">
+    <parameter name="Browsername" value="FF"/>
+    <classes>
+      <class name="org.devlab.ui.testbed.LoginTest">
+        <methods>
+          <include name="beforeSuiteExc"/>
+          <include name="Login_with_with_set_of_valid_data"/>
+          <include name="initDriver"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- org.devlab.ui.testbed.LoginTest -->
+    </classes>
+  </test> <!-- FFBrowser(failed) -->
+</suite> <!-- Failed suite [Suite] -->
