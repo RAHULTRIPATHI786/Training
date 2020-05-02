@@ -22,5 +22,10 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/training/jsonpath/accessors-smart-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/training/jsonpath/asm-5.0.3.jar"/>
+	<classpathentry kind="lib" path="C:/training/jsonpath/json-path-2.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/training/jsonpath/json-smart-2.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/training/jsonpath/slf4j-api-1.7.16.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

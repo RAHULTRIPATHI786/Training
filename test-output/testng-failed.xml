@@ -7,24 +7,11 @@
       <class name="org.devlab.ui.testbed.LoginTest">
         <methods>
           <include name="beforeSuiteExc"/>
-          <include name="Login_with_with_set_of_valid_data"/>
+          <include name="Login_with_with_set_of_Invalid_data"/>
           <include name="initDriver"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- org.devlab.ui.testbed.LoginTest -->
     </classes>
   </test> <!-- ChromeBrowser(failed) -->
-  <test thread-count="5" name="FFBrowser(failed)" parallel="methods">
-    <parameter name="Browsername" value="FF"/>
-    <classes>
-      <class name="org.devlab.ui.testbed.LoginTest">
-        <methods>
-          <include name="beforeSuiteExc"/>
-          <include name="Login_with_with_set_of_valid_data"/>
-          <include name="initDriver"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- org.devlab.ui.testbed.LoginTest -->
-    </classes>
-  </test> <!-- FFBrowser(failed) -->
 </suite> <!-- Failed suite [Suite] -->

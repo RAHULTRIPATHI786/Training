@@ -1,0 +1,57 @@
+{
+   "Dev": {
+      "Common": {
+         "AppURL": "http://newtours.demoaut.com/mercurywelcome.php"
+      },
+      "TestCases": {
+         "Login_with_with_set_of_Invalid_data": {
+            "username": "invalidUser",
+            "pwd": "pwd"
+         },
+         "Login_with_with_set_of_valid_data": {
+            "username": "devuser",
+            "pwd": "devpwd"
+         },
+         "register_user_with_valid_setof_data": [],
+         "Login_with_with_set_of_Multiple_data": {
+            "userCredentialSet": {
+               "FeshAdd": [],
+               "Updated": [],
+               "#text": "uername1:pwd1,username2:password2,username3:password3"
+            }
+         }
+      }
+   },
+   "Test": {
+      "Common": {
+         "AppURL": "http://newtours.demoaut.com/mercurywelcome.php"
+      },
+      "TestCases": {
+         "Login_with_with_set_of_Invalid_data": {
+            "username": "testinvaliduser",
+            "pwd": "pwd"
+         },
+         "Login_with_with_set_of_valid_data": {
+            "username": "TestUser",
+            "pwd": "TestPwd"
+         },
+         "register_user_with_valid_setof_data": []
+      }
+   },
+   "Stage": {
+      "Common": {
+         "AppURL": "http://newtours.demoaut.com/mercurywelcome.php"
+      },
+      "TestCases": {
+         "Login_with_with_set_of_Invalid_data": {
+            "username": "StageUser",
+            "pwd": "StagePwd"
+         },
+         "Login_with_with_set_of_valid_data": {
+            "username": "StageUser",
+            "pwd": "StagePwd"
+         },
+         "register_user_with_valid_setof_data": []
+      }
+   }
+}

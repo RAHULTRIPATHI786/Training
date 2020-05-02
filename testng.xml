@@ -8,12 +8,12 @@
   <class name="org.devlab.ui.testbed.RegistrationTest"></class>
   </classes>
   </test> 
-  <test parallel="methods" name="FFBrowser">
-  <parameter name="Browsername" value="FF"></parameter>
-  <classes>
-  <class name="org.devlab.ui.testbed.LoginTest"></class>
-  <class name="org.devlab.ui.testbed.RegistrationTest"></class>
-  </classes>
-  </test> 
+<!--   <test parallel="methods" name="FFBrowser"> -->
+<!--   <parameter name="Browsername" value="FF"></parameter> -->
+<!--   <classes> -->
+<!--   <class name="org.devlab.ui.testbed.LoginTest"></class> -->
+<!--   <class name="org.devlab.ui.testbed.RegistrationTest"></class> -->
+<!--   </classes> -->
+<!--   </test>  -->
   <!-- Test -->
 </suite> <!-- Suite -->

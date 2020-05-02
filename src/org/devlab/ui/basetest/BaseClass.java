@@ -1,6 +1,8 @@
 package org.devlab.ui.basetest;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -25,13 +27,14 @@ import com.google.common.io.Files;
 public class BaseClass {
 	public static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
 	public static ThreadLocal<String> browser_name = new ThreadLocal<String>();
+	public static String jsnTestData = "";
 
 	@BeforeMethod
 	@Parameters({ "Browsername" })
 	public void initDriver(String browsername) throws IOException {
 //		String browsername = Utility.getpropertyFromPropertyfile("browsername");
 		String executionbrowser = Utility.getpropertyFromPropertyfile("executionbrowser");
-		
+
 		browser_name.set(browsername);
 		DesiredCapabilities cap = null;
 
@@ -63,7 +66,13 @@ public class BaseClass {
 			}
 
 		}
-		driver.get().get("http://newtours.demoaut.com/mercurywelcome.php");
+
+//		String appUrl=Utility.getTestDataFromXMLFile("Common/AppURL");
+
+		// reading the test data from json file
+
+		String appUrl = Utility.getTestdataFromJson("Common.AppURL");
+		driver.get().get(appUrl);
 	}
 
 	@AfterMethod
@@ -72,20 +81,33 @@ public class BaseClass {
 		if (itr.getStatus() > 1) {
 			File fle = ((TakesScreenshot) driver.get()).getScreenshotAs(OutputType.FILE);
 
-			Files.copy(fle, new File("Screenshot/"+browser_name.get()+"_"+itr.getName() + ".png"));
-			
+			Files.copy(fle, new File("Screenshot/" + browser_name.get() + "_" + itr.getName() + ".png"));
 
 		}
 
 		// close driver
 		driver.get().quit();
 	}
-	
-	
+
 	@BeforeSuite
 	public void beforeSuiteExc() {
-		File fle = new File("Screenshot");
-		
-		fle.mkdir();
+		try {
+
+			File fle = new File("TestData.json");
+			BufferedReader br = new BufferedReader(new FileReader(fle));
+			String line = "";
+
+			while (line != null) {
+				line = br.readLine();
+				jsnTestData = jsnTestData + "\n" + line;
+			}
+
+		} catch (Exception e) {
+			Assert.fail("Failed to read the content of testdata file" + e.toString());
+		}
+
+		File imageFolder = new File("Screenshot");
+
+		imageFolder.mkdir();
 	}
 }

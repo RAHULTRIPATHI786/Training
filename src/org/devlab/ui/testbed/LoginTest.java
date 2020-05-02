@@ -1,6 +1,8 @@
 package org.devlab.ui.testbed;
 
+import org.devlab.pageclass.LoginPage;
 import org.devlab.ui.basetest.BaseClass;
+import org.devlab.utility.Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,30 +11,66 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseClass {
 
-	@Test
+	@Test(enabled = true)
 	public void Login_with_with_set_of_valid_data() {
 
-		driver.get().findElement(By.name("userName")).sendKeys("validuser");
-		driver.get().findElement(By.name("password")).sendKeys("validpwd");
+		// reading the testdata from xml file
+//		String username=Utility.getTestDataFromXMLFile("TestCases/Login_with_with_set_of_valid_data/username");
+//		String pwd=Utility.getTestDataFromXMLFile("TestCases/Login_with_with_set_of_valid_data/pwd");		
 
-		driver.get().findElement(By.name("login")).click();
+		// reading the testdata from json file
+		String username = Utility.getTestdataFromJson("TestCases.Login_with_with_set_of_valid_data.username");
+		String pwd = Utility.getTestdataFromJson("TestCases.Login_with_with_set_of_valid_data.pwd");
+
+		Assert.assertTrue(LoginPage.login(username, pwd),
+				"Failed to login into application with valid set of user :" + username + ":" + pwd);
 
 		// assume that navigating to sign on page makes authentication succesfull
-		Assert.assertTrue(driver.get().getCurrentUrl().contains("meuryreservation"),
-				"Failed to login into application with valid set of user : validuser,validpwd");
+//		Assert.assertTrue(driver.get().getCurrentUrl().contains("mercurysignon.php"),
+//				"Failed to login into application with valid set of user : validuser,validpwd");
 
 	}
 
-	@Test
+	@Test(enabled = true)
 	public void Login_with_with_set_of_Invalid_data() {
 
-		driver.get().findElement(By.name("userName")).sendKeys("Invaliduser");
-		driver.get().findElement(By.name("password")).sendKeys("Invalidpwd");
+		// reading the data from xml file
+//		String username=Utility.getTestDataFromXMLFile("TestCases/Login_with_with_set_of_Invalid_data/username");
+//		String pwd=Utility.getTestDataFromXMLFile("TestCases/Login_with_with_set_of_Invalid_data/pwd");	
 
-		driver.get().findElement(By.name("login")).click();
+		// reading the data from json file
+		String username = Utility.getTestdataFromJson("TestCases.Login_with_with_set_of_Invalid_data.username");
+		String pwd = Utility.getTestdataFromJson("TestCases.Login_with_with_set_of_Invalid_data.pwd");
 
-		Assert.assertTrue(driver.get().getCurrentUrl().contains("mercuryreservation"),
-				"Failed to login into application with valid set of user : Invaliduser,Invalidpwd");
+		Assert.assertFalse(LoginPage.login(username, pwd),
+				"Failed to login into application with valid set of user :" + username + ":" + pwd);
 
 	}
+
+//	@Test
+//	public void Login_with_with_set_of_Multiple_data() {
+//
+//		String userset=Utility.getTestDataFromXMLFile("TestCases/Login_with_with_set_of_Multiple_data/userCredentialSet");
+//		
+//		System.out.println(userset);
+//		String[] tmparr = userset.split(",");
+//		
+//		for (int i=0;i<tmparr.length;i++) {
+//	
+//			String[] tmpArr1 = tmparr[i].split(":");
+//			
+//			String username=tmpArr1[0];
+//			String pwssword=tmpArr1[1];
+//			driver.get().findElement(By.name("userName")).clear();
+//			driver.get().findElement(By.name("password")).clear();
+//		driver.get().findElement(By.name("userName")).sendKeys(username);
+//		driver.get().findElement(By.name("password")).sendKeys(pwssword);
+//
+////		driver.get().findElement(By.name("login")).click();
+////		Assert.assertTrue(driver.get().getCurrentUrl().contains("mercuryreservation"),
+////				"Failed to login into application with valid set of user : Invaliduser,Invalidpwd");
+//		}
+
+//	}
+
 }
