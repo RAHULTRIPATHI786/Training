@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="2" total="4" passed="1">
+<testng-results skipped="0" failed="1" ignored="2" retried="2" total="7" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="9169" started-at="2020-05-02T21:49:19 IST" finished-at="2020-05-02T21:49:28 IST">
+  <suite name="Suite" duration-ms="27348" started-at="2020-05-09T21:05:25 IST" finished-at="2020-05-09T21:05:52 IST">
     <groups>
     </groups>
-    <test name="ChromeBrowser" duration-ms="9169" started-at="2020-05-02T21:49:19 IST" finished-at="2020-05-02T21:49:28 IST">
+    <test name="ChromeBrowser" duration-ms="27348" started-at="2020-05-09T21:05:25 IST" finished-at="2020-05-09T21:05:52 IST">
+      <class name="org.devlab.ui.testbed.RegistrationTest">
+        <test-method status="PASS" signature="initDriver(java.lang.String)[pri:0, instance:org.devlab.ui.testbed.RegistrationTest@2b552920]" name="initDriver" is-config="true" duration-ms="7509" started-at="2020-05-09T21:05:25 IST" finished-at="2020-05-09T21:05:32 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="register_user_with_valid_setof_data()[pri:0, instance:org.devlab.ui.testbed.RegistrationTest@2b552920]" name="register_user_with_valid_setof_data" duration-ms="16626" started-at="2020-05-09T21:05:32 IST" finished-at="2020-05-09T21:05:49 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- register_user_with_valid_setof_data -->
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult)[pri:0, instance:org.devlab.ui.testbed.RegistrationTest@2b552920]" name="teardown" is-config="true" duration-ms="624" started-at="2020-05-09T21:05:49 IST" finished-at="2020-05-09T21:05:50 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=register_user_with_valid_setof_data status=SUCCESS method=RegistrationTest.register_user_with_valid_setof_data()[pri:0, instance:org.devlab.ui.testbed.RegistrationTest@2b552920] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- org.devlab.ui.testbed.RegistrationTest -->
       <class name="org.devlab.ui.testbed.LoginTest">
-        <test-method status="PASS" signature="beforeSuiteExc()[pri:0, instance:org.devlab.ui.testbed.LoginTest@5c5a1b69]" name="beforeSuiteExc" is-config="true" duration-ms="7" started-at="2020-05-02T21:49:19 IST" finished-at="2020-05-02T21:49:19 IST">
+        <test-method status="PASS" signature="beforeSuiteExc()[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb]" name="beforeSuiteExc" is-config="true" duration-ms="7" started-at="2020-05-09T21:05:25 IST" finished-at="2020-05-09T21:05:25 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuiteExc -->
-        <test-method status="PASS" signature="initDriver(java.lang.String)[pri:0, instance:org.devlab.ui.testbed.LoginTest@5c5a1b69]" name="initDriver" is-config="true" duration-ms="6014" started-at="2020-05-02T21:49:19 IST" finished-at="2020-05-02T21:49:25 IST">
+        <test-method status="PASS" signature="initDriver(java.lang.String)[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb]" name="initDriver" is-config="true" duration-ms="7439" started-at="2020-05-09T21:05:25 IST" finished-at="2020-05-09T21:05:32 IST">
           <params>
             <param index="0">
               <value>
@@ -22,7 +50,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="initDriver(java.lang.String)[pri:0, instance:org.devlab.ui.testbed.LoginTest@5c5a1b69]" name="initDriver" is-config="true" duration-ms="6124" started-at="2020-05-02T21:49:19 IST" finished-at="2020-05-02T21:49:25 IST">
+        <test-method status="PASS" signature="initDriver(java.lang.String)[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb]" name="initDriver" is-config="true" duration-ms="7521" started-at="2020-05-09T21:05:25 IST" finished-at="2020-05-09T21:05:32 IST">
           <params>
             <param index="0">
               <value>
@@ -33,7 +61,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="FAIL" signature="Login_with_with_set_of_Invalid_data()[pri:0, instance:org.devlab.ui.testbed.LoginTest@5c5a1b69]" name="Login_with_with_set_of_Invalid_data" duration-ms="2225" started-at="2020-05-02T21:49:25 IST" finished-at="2020-05-02T21:49:27 IST">
+        <test-method status="PASS" signature="Login_with_with_set_of_valid_data()[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb]" name="Login_with_with_set_of_valid_data" duration-ms="2334" started-at="2020-05-09T21:05:32 IST" finished-at="2020-05-09T21:05:35 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_with_with_set_of_valid_data -->
+        <test-method status="SKIP" signature="Login_with_with_set_of_Invalid_data()[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb]" name="Login_with_with_set_of_Invalid_data" duration-ms="2166" retried="true" started-at="2020-05-09T21:05:32 IST" finished-at="2020-05-09T21:05:35 IST">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Failed to login into application with valid set of user :StageUser:StagePwd expected [false] but found [true]]]>
@@ -43,7 +75,7 @@
 at org.testng.Assert.fail(Assert.java:97)
 at org.testng.Assert.failNotEquals(Assert.java:968)
 at org.testng.Assert.assertFalse(Assert.java:65)
-at org.devlab.ui.testbed.LoginTest.Login_with_with_set_of_Invalid_data(LoginTest.java:45)
+at org.devlab.ui.testbed.LoginTest.Login_with_with_set_of_Invalid_data(LoginTest.java:47)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -65,32 +97,140 @@ at java.lang.Thread.run(Thread.java:748)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login_with_with_set_of_Invalid_data -->
-        <test-method status="PASS" signature="Login_with_with_set_of_valid_data()[pri:0, instance:org.devlab.ui.testbed.LoginTest@5c5a1b69]" name="Login_with_with_set_of_valid_data" duration-ms="2190" started-at="2020-05-02T21:49:25 IST" finished-at="2020-05-02T21:49:27 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Login_with_with_set_of_valid_data -->
-        <test-method status="PASS" signature="teardown(org.testng.ITestResult)[pri:0, instance:org.devlab.ui.testbed.LoginTest@5c5a1b69]" name="teardown" is-config="true" duration-ms="856" started-at="2020-05-02T21:49:27 IST" finished-at="2020-05-02T21:49:28 IST">
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult)[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb]" name="teardown" is-config="true" duration-ms="853" started-at="2020-05-09T21:05:35 IST" finished-at="2020-05-09T21:05:35 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Login_with_with_set_of_Invalid_data status=FAILURE method=LoginTest.Login_with_with_set_of_Invalid_data()[pri:0, instance:org.devlab.ui.testbed.LoginTest@5c5a1b69] output={null}]]]>
+                <![CDATA[[TestResult name=Login_with_with_set_of_Invalid_data status=SKIP method=LoginTest.Login_with_with_set_of_Invalid_data()[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method status="PASS" signature="teardown(org.testng.ITestResult)[pri:0, instance:org.devlab.ui.testbed.LoginTest@5c5a1b69]" name="teardown" is-config="true" duration-ms="836" started-at="2020-05-02T21:49:27 IST" finished-at="2020-05-02T21:49:28 IST">
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult)[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb]" name="teardown" is-config="true" duration-ms="560" started-at="2020-05-09T21:05:35 IST" finished-at="2020-05-09T21:05:35 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Login_with_with_set_of_valid_data status=SUCCESS method=LoginTest.Login_with_with_set_of_valid_data()[pri:0, instance:org.devlab.ui.testbed.LoginTest@5c5a1b69] output={null}]]]>
+                <![CDATA[[TestResult name=Login_with_with_set_of_valid_data status=SUCCESS method=LoginTest.Login_with_with_set_of_valid_data()[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="initDriver(java.lang.String)[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb]" name="initDriver" is-config="true" duration-ms="4363" started-at="2020-05-09T21:05:35 IST" finished-at="2020-05-09T21:05:40 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="SKIP" signature="Login_with_with_set_of_Invalid_data()[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb]" name="Login_with_with_set_of_Invalid_data" duration-ms="2094" retried="true" started-at="2020-05-09T21:05:40 IST" finished-at="2020-05-09T21:05:42 IST">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Failed to login into application with valid set of user :StageUser:StagePwd expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Failed to login into application with valid set of user :StageUser:StagePwd expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:968)
+at org.testng.Assert.assertFalse(Assert.java:65)
+at org.devlab.ui.testbed.LoginTest.Login_with_with_set_of_Invalid_data(LoginTest.java:47)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:214)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_with_with_set_of_Invalid_data -->
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult)[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb]" name="teardown" is-config="true" duration-ms="834" started-at="2020-05-09T21:05:42 IST" finished-at="2020-05-09T21:05:43 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Login_with_with_set_of_Invalid_data status=SKIP method=LoginTest.Login_with_with_set_of_Invalid_data()[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="initDriver(java.lang.String)[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb]" name="initDriver" is-config="true" duration-ms="6171" started-at="2020-05-09T21:05:43 IST" finished-at="2020-05-09T21:05:49 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="FAIL" signature="Login_with_with_set_of_Invalid_data()[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb]" name="Login_with_with_set_of_Invalid_data" duration-ms="2299" started-at="2020-05-09T21:05:49 IST" finished-at="2020-05-09T21:05:51 IST">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Failed to login into application with valid set of user :StageUser:StagePwd expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Failed to login into application with valid set of user :StageUser:StagePwd expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.failNotEquals(Assert.java:968)
+at org.testng.Assert.assertFalse(Assert.java:65)
+at org.devlab.ui.testbed.LoginTest.Login_with_with_set_of_Invalid_data(LoginTest.java:47)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:214)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:821)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login_with_with_set_of_Invalid_data -->
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult)[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb]" name="teardown" is-config="true" duration-ms="1024" started-at="2020-05-09T21:05:51 IST" finished-at="2020-05-09T21:05:52 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Login_with_with_set_of_Invalid_data status=FAILURE method=LoginTest.Login_with_with_set_of_Invalid_data()[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="afterSuiteMethod()[pri:0, instance:org.devlab.ui.testbed.LoginTest@627551fb]" name="afterSuiteMethod" is-config="true" duration-ms="1" started-at="2020-05-09T21:05:52 IST" finished-at="2020-05-09T21:05:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuiteMethod -->
       </class> <!-- org.devlab.ui.testbed.LoginTest -->
     </test> <!-- ChromeBrowser -->
   </suite> <!-- Suite -->

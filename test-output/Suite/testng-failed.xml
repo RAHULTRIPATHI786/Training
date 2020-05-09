@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="org.devlab.ui.customelistener.AnnotationTransformerListenerClass"/>
+  </listeners>
   <test thread-count="5" name="ChromeBrowser(failed)" parallel="methods">
     <parameter name="Browsername" value="Chrome"/>
     <classes>
@@ -9,6 +12,7 @@
           <include name="beforeSuiteExc"/>
           <include name="Login_with_with_set_of_Invalid_data"/>
           <include name="initDriver"/>
+          <include name="afterSuiteMethod"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- org.devlab.ui.testbed.LoginTest -->

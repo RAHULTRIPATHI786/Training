@@ -27,5 +27,6 @@
 	<classpathentry kind="lib" path="C:/training/jsonpath/json-path-2.2.0.jar"/>
 	<classpathentry kind="lib" path="C:/training/jsonpath/json-smart-2.2.1.jar"/>
 	<classpathentry kind="lib" path="C:/training/jsonpath/slf4j-api-1.7.16.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

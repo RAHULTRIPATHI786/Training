@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class RegistrationTest extends BaseClass {
 
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void register_user_with_valid_setof_data() {
 
 		// click on register link

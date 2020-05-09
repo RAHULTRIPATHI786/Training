@@ -7,8 +7,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
+@Listeners({org.devlab.ui.customelistener.TestCaseListener.class,org.devlab.ui.customelistener.SuiteListenerClass.class})
 public class LoginTest extends BaseClass {
 
 	@Test(enabled = true)
@@ -22,6 +25,8 @@ public class LoginTest extends BaseClass {
 		String username = Utility.getTestdataFromJson("TestCases.Login_with_with_set_of_valid_data.username");
 		String pwd = Utility.getTestdataFromJson("TestCases.Login_with_with_set_of_valid_data.pwd");
 
+		
+	
 		Assert.assertTrue(LoginPage.login(username, pwd),
 				"Failed to login into application with valid set of user :" + username + ":" + pwd);
 
@@ -31,7 +36,7 @@ public class LoginTest extends BaseClass {
 
 	}
 
-	@Test(enabled = true)
+	@Test(enabled = true )
 	public void Login_with_with_set_of_Invalid_data() {
 
 		// reading the data from xml file
@@ -54,6 +59,7 @@ public class LoginTest extends BaseClass {
 //		
 //		System.out.println(userset);
 //		String[] tmparr = userset.split(",");
+//		SoftAssert sftAssert= new SoftAssert();
 //		
 //		for (int i=0;i<tmparr.length;i++) {
 //	
@@ -65,12 +71,18 @@ public class LoginTest extends BaseClass {
 //			driver.get().findElement(By.name("password")).clear();
 //		driver.get().findElement(By.name("userName")).sendKeys(username);
 //		driver.get().findElement(By.name("password")).sendKeys(pwssword);
+////
+//driver.get().findElement(By.name("login")).click();
 //
-////		driver.get().findElement(By.name("login")).click();
+//sftAssert.assertTrue(driver.get().getCurrentUrl().contains("mercuryreservation"),
+//		"Failed to login into application with valid set of user : Invaliduser,Invalidpwd");
 ////		Assert.assertTrue(driver.get().getCurrentUrl().contains("mercuryreservation"),
 ////				"Failed to login into application with valid set of user : Invaliduser,Invalidpwd");
 //		}
-
+//		
+//		
+//		sftAssert.assertAll();
+//
 //	}
 
 }

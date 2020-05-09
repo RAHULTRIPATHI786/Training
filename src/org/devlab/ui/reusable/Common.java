@@ -8,7 +8,7 @@ public class Common {
 		
 	}
 	
-//	clickOnlink
+//	clickOnlink 
 	
 //	clickOnElement
 	
