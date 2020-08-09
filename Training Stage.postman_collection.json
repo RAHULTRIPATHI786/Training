@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "90667536-c54e-4a9c-8435-a58b66ab4e2e",
+		"name": "Training Stage",
+		"description": "This collection has all the request created for training purposes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "createuser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "51411841-7853-4a1b-9dd4-e0197cab724b",
+								"exec": [
+									" \r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    tst= pm.response.to.have.status(201);\r",
+									"});\r",
+									" \r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"{{name}}\",\r\n    \"job\": \"TeamLeader\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://reqres.in/api/users",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e1457b8d-8dbf-47fc-8737-8e4ee1ddda22",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2a03a367-26c0-4222-a37e-18daa765c324",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
